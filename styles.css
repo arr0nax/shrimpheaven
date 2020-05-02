@@ -9,9 +9,10 @@
 }
 
 body {
-    padding: none;
-    margin: none;
+    padding: 0px;
+    margin: 0px;
     overflow: hidden;
+    /* position: relative; */
     pointer-events: none;
     -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
@@ -20,11 +21,21 @@ body {
           user-select: none;
 
           font-family: shrimp2;
+
+}
+
+button {
+    pointer-events: all;
 }
 
 
 .shrimp {
     z-index: 3;
+}
+
+.stats {
+    position: relative;
+    z-index: 2;
 }
 
 #level-img-container {
@@ -37,18 +48,54 @@ body {
 }
 
 #resetButton {
-    position: absolute;
-    top: 8px;
-    right: 8px;
+    position: relative;
     z-index: 4;
-    pointer-events: auto;
 }
+
+#machinesContainer {
+    position: absolute;
+    top: 0px;
+    right: 300px;
+    z-index: 0;
+}
+
+#machinesContainer .row {
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+
+.machine {
+    height: 100px;
+    width: 100px;
+}
+
+#store-container {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 300px;
+    z-index: 2;
+}
+
+#store-container .row {
+    display: none;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .level-img {
     position: absolute;
     top: 0px;
     transition: all 500ms;
     opacity: 0;
+    z-index: 1;
 }
 
 #achievements-container {
@@ -59,6 +106,7 @@ body {
     justify-content: center;
     flex-direction: column;
     width: 100vw;
+    z-index: 4;
 }
 
 .achievement {

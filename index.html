@@ -30,9 +30,43 @@
             <img src="levels/level2.png" class="level-img" id="level2" alt="">
             <img src="levels/level3.png" class="level-img" id="level3" alt="">
         </div>
-        <h3 id="top-spm-container">top score: <span id="topSPM"></span></h3>
-        <button type="button" name="button" id="resetButton">reset</button>
+        <div class="stats">
+            <button type="button" name="button" id="resetButton">reset</button>
+            <h3 id="top-spm-container">top speed: <span id="topSPM"></span></h3>
+            <h1 id="total-shrimp-container">shrimps: <span id="totalShrimpText"></span></h1>
+        </div>
         <h1 id="score-container"><span id="bigSPMtext"></span></h1>
-        <div id="achievements-container" />
+        <div id="achievements-container"></div>
+        <div id="machinesContainer">
+            <div class="row" id="cocktails"></div>
+            <div class="row" id="frozens"></div>
+            <div class="row" id="conveyors"></div>
+        </div>
+        <div id="store-container">
+            <div class="row" id='cocktailStoreRow'>
+                <div class="">cocktail sauce</div>
+                <div class="">
+                    <p>owned: <span id="cocktailsCount"></span></p>
+                    <p>price: <span id="cocktailPriceText"></span></p>
+                </div>
+                <button id="cocktailButton" disabled>buy!</button>
+            </div>
+            <div class="row" id='frozenStoreRow'>
+                <div class="">bag o' shrimp</div>
+                <div class="">
+                    <p>owned: <span id="frozensCount"></span></p>
+                    <p>price: <span id="frozenPriceText"></span></p>
+                </div>
+                <button id="frozenButton" disabled>buy!</button>
+            </div>
+            <div class="row" id='conveyorStoreRow'>
+                <div class="">conveyor belt</div>
+                <div class="">
+                    <p>owned: <span id="conveyorsCount"></span></p>
+                    <p>price: <span id="conveyorPriceText"></span></p>
+                </div>
+                <button id="conveyorButton" disabled>buy!</button>
+            </div>
+        </div>
     </body>
 </html>
